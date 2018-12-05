@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				/*
+				 * 1.prop方法
+				 * 2.removeProp方法
+				 * 
+				 * 
+				 */
+				
+				//1.prop方法
+				//特点和attr方法一致
+				$('span').prop('demo','aaa')
+				//$('span').eq(1).prop('demo','wgd')
+				//console.log($('span').eq(1).prop('demo'))
+				//console.log($('span').prop('demo'))
+				
+				
+				//2.removeProp
+				//特点和removeAttr方法一致
+				//$('span').removeProp('demo');
+				
+				/*
+				 * 注意点：
+				 * prop方法不仅能操作属性，还能操作属性节点
+				 * prop方法设置属性时只会默认设置第一个，设置属性节点的话会将所有指定属性节点的值设置掉
+				 * 
+				 * 官方推荐在操作属性节点时，具有true和false两个属性的属性节点，如
+				 * checked selected 或者 disabled 使用prop(),其他使用attr()；
+				 * 
+				 */
+				//console.log($('span').prop('class'))
+				//$('span').prop('class','it777')
+				
+				console.log($('input').prop('checked'))//true/false
+				console.log($('input').attr('checked'))//checked/undifined
+				
+			})
+			
+		</script>
+	</head>
+	<body>
+		<span class="span1" name='it666'></span>
+		<span class="span2" name='wgd1'></span>
+		<input type="checkbox"checked="checked" />
+	</body>
+</html>

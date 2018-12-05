@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/myAjax.js" ></script>
+		<script>
+			
+			window.onload =function(){
+				var btn = document.querySelector('button')
+				btn.onclick = function(){
+					//url?key=value&key=value
+					ajax("06-Ajxa-get.php",{
+					"userName":"王国栋",
+					"userPwd":"1234567"
+					},3000
+					,function(xhr){
+						alert(xhr.responseText)
+					},function(xhr){
+						alert("请求失败")
+					})
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button>提交数据</button>
+	</body>
+</html>

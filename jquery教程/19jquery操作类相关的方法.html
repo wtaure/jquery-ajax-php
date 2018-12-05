@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				/*border: 1px solid black;*/
+			}
+			.class1{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			.class2{
+				border: 10px solid #000; 
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				/*
+				 * 1.addClass(class|fn)
+				 * 2.removeClass([class|fn])
+				 * 3.toggleClass([class|sw])
+				 */
+				
+				//1.addClass(class|fn)
+				//作用：添加一个类
+				//如果要添加多个类，用空格隔开
+				$('button').eq(0).click(function(){
+					$('div').addClass('class1 class2')
+				})
+				//2.removeClass([class|fn])
+				//作用：删除一个类
+				//如果要删除多个类，用空格隔开
+				$('button').eq(1).click(function(){
+					$('div').removeClass('class1 class2')
+				})
+				//3.toggleClass([class|sw])
+				//作用：切换类
+				//如果要切换多个类，用空格隔开
+				$('button').eq(2).click(function(){
+					$('div').toggleClass('class1 class2')
+				})
+//				$('div').eq(0).mouseover(function(){
+//					$('div').toggleClass('class1 class2')
+//				})
+//				
+				
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<button>添加类</button>
+		<button>删除类</button>
+		<button>切换类</button>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			/*
+			 * $.trim(参数：需要去除空格的字符串);
+			 * 作用：去除字符串两端的空格
+			 * 参数：需要去除空格的字符串
+			 * 返回值：去除空格之后的字符串
+			 */
+//			var str = "  wgd  ";
+//			console.log("---"+str+"---");
+//			var res = $.trim(str);
+//			console.log("---"+res+"---");
+//			
+			/*
+			 *$.iswindow() 
+			 * 判断传入的对象是否是window对象
+			 * 返回值：true/false
+			 */
+			var arr =[1,3,5,7,9];
+			//定义一个伪数组
+			var arr1 = {0:1,1:2,2:3,length:99}
+			//定义一个函数
+			var fn = function(){
+				
+				
+			}
+			//定义一个window对象
+			var w = window
+			
+			//调用$.iswindow方法判断是否是window对象
+			var res = $.isWindow(arr);
+			console.log(res);
+			
+			/*
+			 * $.isArray()
+			 * 判断传入的对象是否是真数组
+			 * 返回值：true/false
+			 */
+			
+			/*
+			 * $.isFunction()
+			 * 判断传入的对象是否是函数
+			 * 返回值：true/false
+			 * jquery框架本质是一个函数
+			 */
+			var res = $.isFunction(jQuery);
+			console.log(res);//返回true
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

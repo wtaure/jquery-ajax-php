@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				
+//			$('.father').mouseover(function(){
+//				/*
+//				 * 子元素的移入移出也会触发父元素的移入移出事件
+//				 */
+//				console.log('father被移入了')
+//				
+//				
+//			})
+			
+			/*
+			 * mouseenter/mouseleave事件，子元素移入移出不会触发父元素的事件
+			 */
+			
+//				$('.father').mouseenter(function(){
+//				
+//				console.log('father被移入了')
+//				
+//				
+//			})
+//				$('.father').mouseleave(function(){
+//				
+//				console.log('father被移出了')
+//				
+//				
+//			})
+				
+				$('.father').hover(function(){
+					console.log('father被移入了')
+				}),function(){
+					console.log('father被移出了')
+					
+				}
+			})
+			
+			
+		</script>
+		<style>
+			
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.father{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			.son{
+				width: 100px;
+				height: 100px;
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son">
+				
+			</div>
+		</div>
+	</body>
+</html>

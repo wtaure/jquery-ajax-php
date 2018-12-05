@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			
+			$(function(){
+				/*	删除节点相关方法
+				 * 	empty()
+					remove([expr])
+					detach([expr])
+					//和remove相同
+				 */
+				var $li = $('li')
+				$('button').click(function(){
+					$('li').remove('.one');
+					//删除指定元素
+//					$('div').empty()
+					//删除指定元素子元素和自身内容，指定元素自身不会被删除
+					
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>删除节点</button>
+		<ul>
+			<li class="one">我是第一个li</li>
+			<li>我是第二个li</li>
+			<li>我是第三个li</li>
+		</ul>
+		<div>我是div
+			<p>我是div的内容</p>
+		</div>
+	</body>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 50px;
+				height: 50px;
+				background: red;
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//编辑jq代码
+				/*
+				 * :contains(text)
+				 * :empty
+				 * :has(selector)
+				 * :parent
+				 */
+				
+				//:empty 作用：找到既没有*-子元素又没有文本内容的指定元素
+//				var $div = $('div:empty');
+//				console.log($div) 
+				
+				//:parent 作用：找到有子元素或者文本内容的指定元素
+//				var $div = $('div:parent');
+//				console.log($div) 
+				//:contain(text) 作用：找到包含（只要有）指定文本内容的指定元素	
+//				var $div = $("div:contains('我是div')");
+//				console.log($div) 
+//				
+				//:has(selector) 作用：找到包含指定子元素的指定元素
+				var $div = $("div:has('span')");
+				console.log($div)
+			})
+				
+				
+			
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div>我是div</div>
+		<div>我是div123</div>
+		<div><span></span></div>
+		<div><div></div></div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				var btn = document.getElementsByTagName('button')[0];
+				btn.onclick = function(){
+					var input = document.getElementsByTagName('input')[0]
+					var text =input.value
+					
+					//$('img').prop('src',text);
+					$('img').attr('src',text);
+				}
+				
+			})
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type=""/>
+		<button>切换</button>
+		<img src="img/2.jpg" />
+	</body>
+</html>

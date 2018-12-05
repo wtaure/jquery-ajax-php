@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.father{
+				width: 200px;
+				height: 200px;
+				background:red ;
+			}
+			.son{
+				width:100px ;
+				height: 100px;
+				background: blue;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				/*
+				 * 1.什么是事件冒泡
+				 * 2.如何阻止冒泡行为
+				 * 3.什么是默认行为
+				 * 4.如何阻止默认行为
+				 */
+				$('.son').click(function(event){
+					alert('son');
+					//阻止事件冒泡
+					//return false;
+					//event.stopPropagation();
+				})
+				$('.father').click(function(){
+					alert('father');
+					
+				})
+				
+				//trigger自动触发事件
+				//trigger和triggerHandler的区别
+				//第一区别
+				//如果利用triggler自动触发点击事件，会触发冒泡事件
+				//如果利用trigglerHandler自动触发点击事件，不会触发冒泡事件
+				//第二个区别
+				//如果利用triggler自动触发点击事件，会触发默认行为
+				//如果利用trigglerHandler自动触发点击事件，不会触发默认行为
+				
+				//$('.son').trigger('click')
+				//$('.son').triggerHandler('click')
+				
+				
+				
+				$('a').click(function(event){
+					alert('注册');
+					//阻止默认行为
+					//return false;\
+					//event.preventDefault();
+				})
+				//$("a").trigger('click');
+				
+				$("input[type='submit']").click(function(){
+					alert('submit')
+					
+				})
+				//$("input[type='submit']").trigger('click');
+				$("input[type='submit']").triggerHandler('click');
+			})
+		</script>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son"></div>
+		</div>
+		<a href="https://www.baidu.com/">注册</a>
+		<form action="https://www.taobao.com/">
+			<input type="text" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

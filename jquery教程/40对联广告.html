@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				$(window).scroll(function(){
+					var $offset = $('html,body').scrollTop();
+					console.log($offset)
+					if($offset>=120){
+						$('.left').show(1000)
+						$('.right').show(1000)
+					}else{
+						$('.left').hide(1000)
+						$('.right').hide(1000)
+					}
+					
+					
+				})
+				
+//					
+				
+			})
+			
+		</script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			img{
+				width: 130px;
+				height: 180px;
+			}
+			.left{
+				float: left;
+				position: fixed;
+				left: 0;
+				top: 200px;
+				display: none;
+			}
+			.right{
+				float: right;
+				position: fixed;
+				right: 0;
+				top: 200px;
+				display: none;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<img src="img/card04jpg.jpg" class="left"/>
+		<img src="img/card04jpg.jpg"  class="right"/>
+		<br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<br><br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		
+		<br>
+		
+		
+		<br>
+			<br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<br><br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		
+		<br>
+		
+		
+		<br>
+		
+	</body>
+</html>

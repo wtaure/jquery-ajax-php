@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.father{
+				width: 200px;
+				height: 200px;
+				background:red ;
+			}
+			.son{
+				width:100px ;
+				height: 100px;
+				background: blue;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				
+				
+				$('.father').on('click.ls',function(event){
+					alert('father click1');
+					//阻止事件冒泡
+					//return false;
+					//event.stopPropagation();
+				})
+				$('.father').on('click',function(event){
+					alert('father click2');
+					//阻止事件冒泡
+					//return false;
+					//event.stopPropagation();
+				})
+				$('.son').on('click.ls',function(event){
+					alert('son1 click1');
+					//阻止事件冒泡
+					//return false;
+					//event.stopPropagation();
+				})
+				/*
+				 * 利用trigger触发子元素的命名空间事件，那么父元素带相同命名空间
+				 * 的事件也会触发，而父元素没有命名空间的元素不会触发
+				 * 
+				 */
+				$('.son').trigger('click.ls')
+				/*
+				 * 
+				 */
+//				$('.son').trigger('click')
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son"></div>
+		</div>
+		<a href="https://www.baidu.com/">注册</a>
+		<form action="https://www.taobao.com/">
+			<input type="text" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

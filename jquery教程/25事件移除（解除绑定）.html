@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				function text1(){
+					alert('click1')
+					
+				}
+				function text2(){
+					alert('click2')
+					
+				}
+				function text3(){
+					alert('mouseover')
+					
+				}
+				function text4(){
+					alert('mouseleave')
+					
+				}
+				$('button').click(text1)
+				$('button').click(text2)
+				$('button').mouseleave(text3)
+				$('button').mouseover(text4)
+				//off方法：不传参数，移除所有事件
+				//off方法，如果传递一个参数，会移除指定类型的事件
+				//$('button').off('click')
+				////off方法，如果传递两个参数，会移除指定类型的指定事件
+				$('button').off('click',text1)
+			})
+		</script>
+	</head>
+	<body>
+		<button>确定
+		</button>
+	</body>
+</html>

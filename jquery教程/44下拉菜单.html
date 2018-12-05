@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			/*
+			 * 在jquery中如果需要执行动画,建议在执行动画之前先调用stop方法，
+			 * 然后再执行动画。
+			 */
+			$(function(){
+				$('.nav>li').mouseenter(function(){
+					//停止当前正在运行的动画
+					$(this).children('.sub').stop()
+					$(this).children('.sub').slideDown(1000)
+					
+				})
+				$('.nav>li').mouseleave(function(){
+					//停止当前正在运行的动画
+					$(this).children('.sub').stop()
+					$(this).children('.sub').slideUp(1000)
+					
+				})
+				
+			})
+			
+		</script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.nav{
+				list-style: none;
+				width: 300px;
+				height: 50px;
+				background: peachpuff;
+				margin: 100px auto;
+			}
+			.nav>li{
+
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				float: left;
+				text-align: center;
+			}
+			.sub{
+				list-style: none;
+				background: papayawhip;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav"> 
+			<li>一级菜单
+			<ul class="sub">
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+				<li>二级菜单</li>
+			</ul>
+			</li>
+			<li>一级菜单</li>
+			<li>一级菜单</li>
+		</ul>
+	</body>
+</html>

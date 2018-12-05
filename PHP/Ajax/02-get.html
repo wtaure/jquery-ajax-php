@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			1.可以通过from标签的method属性指定发送请求的类型
+			2.如果是get请求将提交的数据拼接到URL后面
+			3.如果是post请求会将提交的数据放到请求头中
+			
+		-->
+		<form action="02-get.php" method="post">
+			<input type="text" name="userName"/><br>
+			<input type="password" name="userPwd"/><br>
+			<input type="submit" /><br>
+		</form>
+	</body>
+</html>

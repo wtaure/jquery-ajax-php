@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/myPostAndGet.js" ></script>
+		<script>
+//			window.onload=function(){
+//				var btn = document.querySelector("button");
+//				btn.onclick = function(){
+////					//1.创建异步对象
+////					var xmlHttp =new XMLHttpRequest();
+////					//2.设置传输内容和传输地址
+////					xmlHttp.open("POST",
+//////						{
+//////							"userName":"wgd",
+//////							"userPwd":"123456"
+//////							
+//////						}
+////					"06-Ajxa-get.php",true);
+////					//3.发送请求
+////					xmlHttp.send();
+////					//4.监听状态
+////					xmlHttp.onreadystatechange = function(){
+////						//判断传输是否完成
+////						if(xmlHttp.status>=200&&xmlHttp.status<300||xmlHttp.status===304){
+////							console.log("传输成功")
+////						}else{
+////							console.log("传输失败");
+////						}
+////						if(xmlHttp.readyState==4){
+////							console.log("post传输过程完成")
+////						}
+////						
+////					}
+////				}
+//				
+//			}
+			window.onload =function(){
+				var btn = document.querySelector('button');
+				btn.onclick = function(){
+					ajax(
+						
+						{
+							
+						}
+//						type:"POST",
+//						url:"08-Ajax-post.php",
+//							data:{
+//						"userName":"wgd",
+//						"userPwd":"123456"
+//						
+//					}
+//					,
+//					function(xhr){
+//						console.log(xhr.responseText);
+//						
+//					},function(xhr){
+//						console.log("请求失败");
+//					}
+					
+					);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		 <button>发送POST请求</button>
+	</body>
+</html>

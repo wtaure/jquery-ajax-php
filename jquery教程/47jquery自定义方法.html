@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script>
+			
+			$(function(){
+				$('button').eq(0).click(function(){
+					$('.one').animate({
+						marginLeft:500
+					},1000,"linear",function(){
+						
+					})
+					$('.two').animate({
+						marginLeft:500
+					},1000,function(){
+						/*
+				 * 第一个参数:指定动画的动作
+				 * 第二个参数:指定动画的时常
+				 * 第三个参数:指定动画的节奏，默认就是缓动的 
+				 * 第四个参数:指定动画完成后的动作（用函数来指定实现）
+				 */
+					})
+				})
+				$('button').eq(1).click(function(){
+					$('.one').animate({
+						marginLeft:"+=200"
+					},1000,"linear",function(){
+						
+					}).delay(1000).animate({
+						width:500
+						//delay方法是延迟接下来的动画操作
+					})
+					
+				})
+				$('button').eq(2).click(function(){
+//					$('.one').animate({
+//						width:"toggle"
+//					},1000,"linear",function(){
+//						
+//					})
+//					$('div').stop()
+					//立即停止当前的动画，停止后续的动画
+					//添加参数true,停止当前和后续所有的动画
+//					$('div').stop(true)
+					//添加true,false,立即停止所有的和后续的
+//					$('div').stop(true,false)
+					//添加false,true，立即停止当前的动画，继续执行后续的动画
+//					$('div').stop(false,true)
+					
+					//添加true,ture，立即完成当前的动画，停止后续的动画
+					$('div').stop(true,true)
+				})
+				
+			})
+		</script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 10px 0px;
+			}
+			.two{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<button>操作属性</button>
+		<button>累加属性</button>
+		<button>关键字</button>
+		<div class="one"></div>
+		<div class="two"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="../js/myPostAndGet.js" ></script>
+		<script>
+			window.onload = function(){
+					var btn = document.querySelector('button');
+			btn.onclick = function(evi){
+//				$.ajax({
+//					
+//					url:"09-ajax-jquery.php",
+//					data : "name=wgd&Pwd=123456",
+//					type:"GET",
+//					time : 3000,
+//					success: function(msg){
+////						alert(mes);
+//						console.log(msg)
+//					},
+//					error : function(xhr){
+//						alert(xhr.status)
+//					},
+//					
+////					async:true
+//				});
+				ajax({
+					
+					data: {
+						"name" :"wgd",
+						"Pwd":"123"
+						},
+						url:"09-ajax-jquery.php",
+					type:"get",
+					time : 3000,
+					success: function(msg){
+						alert(msg.responseText);
+//						console.log(msg)
+					},
+					error : function(xhr){
+						alert(xhr.status)
+					},
+				})
+			}
+			}
+		
+		</script>
+	</head>
+	<body>
+		<button>jquery ajax</button>
+	</body>
+</html>

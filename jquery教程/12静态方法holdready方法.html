@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			
+			
+		</script>
+	</head>
+	<body>
+		<button>ready</button>
+		<script>
+			//$.holdReady(true);作用:暂停ready的执行
+			$.holdReady(true)
+			$(document).ready(function(){
+				alert("ready");
+			})
+			
+			var btn = document.getElementsByTagName('button')[0]
+			//原生js 暂停加载ready有效有效
+			btn.onclick=function(){
+				//$.holdReady(false);作用:恢复ready的执行
+				$.holdReady(false);
+				
+			};
+			//jq（$.holdReady(false); 无效）
+//			$(function(){
+//				$(btn).click(function(){
+//					
+//					$.holdReady(false);
+//					
+//				})
+//				
+//			})
+			
+			
+		</script>
+	</body>
+</html>

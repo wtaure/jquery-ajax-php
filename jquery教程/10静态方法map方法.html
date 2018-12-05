@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			var arr = [1,3,5,7,9]
+			var arr1 = {0:1,1:2,2:3,4:5}
+			
+			//利用js原生的map方法遍历数组
+			/*
+			 第一个参数：当前遍历到的元素
+			 第二个参数：当前遍历到的索引
+			 第三个参数：当前遍历到的数组
+			 和原生的foreach一样，不能遍历伪数组
+			 * */
+//			arr.map(function(value,index,array){
+//				console.log(index,value,array);
+//			})
+			//利用js原生的map方法遍历伪数组（报错）
+//			arr1.map(function(index,value,array){
+//				console.log(index,value,array);
+//			})　
+
+			//利用jquery的map方法遍历数组
+			/*
+			 第一个参数：要遍历的数组
+			 第二个参数：回调的函数
+			 回调函数的参数：
+			 第一个参数：遍历到的元素
+			 第二个参数：遍历到的索引
+			 和jquery中的each方法一样，map静态方法也可以遍历伪数组。
+			 * */
+//			$.map(arr,function(index,value){
+//				console.log(index,value);
+//			})
+			
+			//利用jquery的map方法遍历伪数组
+//			$.map(arr1,function(value,index){
+//				console.log(index,value);
+//			})
+
+			//each和map对比
+			
+			/*jquery中的each静态方法和map静态方法的区别
+			 * each静态方法遍历后默认的返回值是，遍历谁就返回谁
+			 * map静态方法遍历后默认的返回值是返回一个空数组
+			 * 
+			 * 
+			 * each静态方法不支持在回调函数中对遍历数组进行处理
+			 * map静态方法可以在回调函数中通过return对遍历的数组进行处理，然后生成一个新的数组并返回
+			*/
+			var res1 = $.each(arr1,function(value,index){
+//				console.log(index,value);
+				//return value+index 
+			})
+			
+			var res2 = $.map(arr1,function(value,index){
+//				console.log(index,value);
+				//return value+index;
+			})
+			console.log(res1)
+			console.log(res2);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

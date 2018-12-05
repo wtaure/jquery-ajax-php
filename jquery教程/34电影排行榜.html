@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			li{
+				
+				list-style: none;
+				border-top:1px dashed black ;
+				line-height: 35px;
+			}
+			h1{
+				font-size: 20px;
+				line-height: 35px;
+				color: deeppink;
+				padding-left: 10px;				
+			}
+			.box{
+				width: 300px;
+				height: 450px;
+				border: 1px solid black;
+				margin: 50px auto;
+				
+			}
+			ul li img{
+				/*width: 100px;*/
+				/*height: 150px;*/
+			}
+			ul>li>span{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: #ccc;
+				text-align: center;
+				line-height: 20px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			ul>li:nth-child(-n+3) span{
+				background-color: deeppink;
+			}
+			.content{
+				display: none;
+				overflow: hidden;
+			}
+			.content>img{
+				margin-left: 10px;
+				width: 80px;
+				height: 120px;
+				float: left;
+				margin: 10px;
+				margin-top: 0px;
+			}
+			.content>p{
+				line-height: 1.2em;
+				width: 280px;
+				height: 80px;
+				font-size: 12px;
+				margin: 10px;
+				margin-top: -2px;
+				text-indent: 0.8rem;
+				/*/float: right;*/
+			}
+			
+			.cunrrent .content{
+				display: block;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				$('li').mouseenter(function(){
+					$(this).addClass('cunrrent')
+				})
+				
+				$('li').mouseleave(function(){
+					$(this).removeClass('cunrrent')
+					
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<h1>电影排行榜</h1>
+			<ul>
+				<li><span>1</span>电影1
+				<div class="content">
+					<img src="img/card04jpg.jpg" />
+					<p>陈羽凡真的吸毒被抓了！今天（11月28日）早些时候，就有自称“可靠消息”的网友爆料此事。刚才，据“平安石景山”微博官方消息，11月26日，石景山公安分局抓获2名涉毒违法人员，其中包括43岁男歌手陈某，随后，“平安北京”微博也转发并盖章“毒品，让‘最美’凋零”，坐实了“陈某”就是歌手陈羽凡。
+					</p>
+				</div>
+				</li>
+				<li><span>2</span>电影2
+				<div class="content">
+					<img src="img/card04jpg.jpg" />
+					<p>陈羽凡真的吸毒被抓了！今天（11月28日）早些时候，就有自称“可靠消息”的网友爆料此事。刚才，据“平安石景山”微博官方消息，11月26日，石景山公安分局抓获2名涉毒违法人员，其中包括43岁男歌手陈某，随后，“平安北京”微博也转发并盖章“毒品，让‘最美’凋零”，坐实了“陈某”就是歌手陈羽凡。
+					</p>
+				</div></li>
+				<li><span>3</span>电影3
+				<div class="content">
+					<img src="img/card04jpg.jpg" />
+					<p>陈羽凡真的吸毒被抓了！今天（11月28日）早些时候，就有自称“可靠消息”的网友爆料此事。刚才，据“平安石景山”微博官方消息，11月26日，石景山公安分局抓获2名涉毒违法人员，其中包括43岁男歌手陈某，随后，“平安北京”微博也转发并盖章“毒品，让‘最美’凋零”，坐实了“陈某”就是歌手陈羽凡。
+					</p>
+				</div></li>
+				<li><span>4</span>电影4
+				<div class="content">
+					<img src="img/card04jpg.jpg" />
+					<p>陈羽凡真的吸毒被抓了！今天（11月28日）早些时候，就有自称“可靠消息”的网友爆料此事。刚才，据“平安石景山”微博官方消息，11月26日，石景山公安分局抓获2名涉毒违法人员，其中包括43岁男歌手陈某，随后，“平安北京”微博也转发并盖章“毒品，让‘最美’凋零”，坐实了“陈某”就是歌手陈羽凡。
+					</p>
+				</div></li>
+			</ul>
+			
+		</div>
+	</body>
+</html>

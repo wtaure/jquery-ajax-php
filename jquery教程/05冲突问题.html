@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/text.js"></script>
+
+		<script>
+			//原因:text.js中的$覆盖掉了jq的$
+			//解决方案
+			//1.释放$符号的使用权、
+			//注意点:释放操作必须在编写其他JQ代码之前
+			//释放之后不能使用$,改为使用jQuery
+			//jQuery.noConflict();
+			
+			//自定义一个访问符号
+			var nj =jQuery.noConflict();
+			nj(function() {
+				alert('hello,wgd');
+			});
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

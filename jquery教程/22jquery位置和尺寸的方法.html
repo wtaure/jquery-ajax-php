@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				
+				
+			}
+			.father{
+				width: 200px;
+				height: 200px;
+				background: red;
+				border: 20px solid #000;
+				margin-left: 50px;
+				margin-top: 10px;
+				position: relative;
+				top: 10px;
+			}
+			.son{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+				
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script>
+			$(function(){
+				//获取
+				$('button').eq(0).click(function(){
+					//获取元素的宽度
+//					console.log($('.son').offset().left); // 50+20+50
+//					console.log($('.son').position().left)// 50
+					
+				});
+				//设置
+				$('button').eq(1).click(function(){
+					//设置元素的宽度
+//					$('.father').innerHeight(500)//height:500
+//					console.log($('.father').outerHeight())//200+20+20
+					console.log($('.father').innerHeight())//200 (不包括border)
+					//console.log($('.son').position().left)
+//					$('.son').position({
+//						left : '10px'
+//					})
+					
+				})
+			})
+			//outherHeight(outherWeight) 获取第一个匹配元素外部高度/宽度（默认包括补白和边框）。 
+				//对立面边框的距离
+			
+			//innerHeight(innerWidth)获取第一个匹配元素内部区域高度（包括补白、不包括边框）。	
+				//此方法对可见和隐藏元素均有效。
+				
+				
+			//offset([coordinates])
+			//console.log($('.father').offset().top); // 返回20px
+			//距离窗口的偏移位
+			//用于设置或返回当前匹配元素相对于当前文档的偏移，也就是相对于当前文档的坐标。该函数值对可见元素有效。
+				//返回的对象包含两个整型属性：top 和 left，以像素计。此方法只对可见元素有效。
+				
+			//position()
+			//作用：获取元素距离定位元素的偏移量
+			//console.log($('.son').position().left) //返回50
+			
+			
+			//注意：position()只能获取不能设置
+			
+			
+			
+			
+			
+			//scrollTop([val])
+			
+			
+			
+		
+	</script>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son">
+				
+			</div>
+			
+		</div>
+		<button>获取</button>
+		<button>设置</button>
+	</body>
+</html>
